@@ -11,19 +11,26 @@ R_inner=200
 fred = turtle.Turtle()
 fred.speed(99999)
 
-def epicycloid(a, b, nos_cycle):
+def nephroid(a, b, nos_cycle):
     n=360
     angle=2*PI/n
+    status=9999
+    fred.penup()
     for i in range(nos_cycle*n):
 	   beta = i * angle 
 	   x = (a+b)*math.cos(beta) - b*math.cos((a+b)*beta/b)
 	   y = (a+b)*math.sin(beta) - b*math.sin((a+b)*beta/b)
+	   if (status==9999):
+		fred.setx(x)
+		fred.sety(y)
+		fred.pendown()
+		status=1
            ##x = ((r)*math.cos(beta) + r*beta*math.cos(alpha))
            ##y = direction*(r)*math.sin(beta)+r*beta*math.sin(alpha)
 	   ##x = R*math.cos(beta/20)+x
 	   ##y = R*math.sin(beta/20)+y
            fred.goto(x,y)
 
-epicycloid(90, 30, 100)
+nephroid(100, 50, 100)
 
 wn.exitonclick()
