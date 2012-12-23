@@ -16,16 +16,17 @@ def epicycloid(R, r, nos_cycle):
     angle=2*PI/n
     a=R
     b=R
+    fred.penup()
+    status=9999
     for i in range(nos_cycle*n):
 	   beta = i * angle 
 	   x = (a+b)*math.cos(beta) - b*math.cos((a+b)*beta/b)
 	   y = (a+b)*math.sin(beta) - b*math.sin((a+b)*beta/b)
-           ##x = ((r)*math.cos(beta) + r*beta*math.cos(alpha))
-           ##y = direction*(r)*math.sin(beta)+r*beta*math.sin(alpha)
-	   ##x = R*math.cos(beta/20)+x
-	   ##y = R*math.sin(beta/20)+y
            fred.goto(x,y)
+	   if (status==9999):
+		fred.pendown()
+		status=1
 
-epicycloid(100, 10, 100)
+epicycloid(100, 10, 1)
 
 wn.exitonclick()
