@@ -1,6 +1,7 @@
 
 import math
 import turtle
+import random
 
 wn = turtle.Screen()
 wn.bgcolor('lightblue')
@@ -10,6 +11,7 @@ R_inner=200
 
 fred = turtle.Turtle()
 fred.speed(99999)
+end_of_world=1
 
 def hypocycloid(a, b, nos_cycle):
     n=36
@@ -25,6 +27,13 @@ def hypocycloid(a, b, nos_cycle):
 		fred.pendown()
 		status=1
 
-hypocycloid(50, 10, 1)
 
-wn.exitonclick()
+while end_of_world<99:
+	a=random.randint(1,400)
+	b=random.randint(1,400)
+	print a, b
+	hypocycloid(a, b, 200)
+	raw = raw_input()
+	fred.reset()
+	fred.clear()
+

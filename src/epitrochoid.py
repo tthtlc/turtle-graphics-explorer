@@ -11,20 +11,24 @@ R_inner=200
 fred = turtle.Turtle()
 fred.speed(99999)
 
-def hypocycloid(a, b, nos_cycle):
-    n=36
+#### d==r means epicycloid
+
+def epitrochoid(R, r, d, nos_cycle):
+    n=72
     angle=2*PI/n
     fred.penup()
     status=9999
     for i in range(nos_cycle*n):
 	   beta = i * angle 
-	   x = (a-b)*math.cos(beta) + b*math.cos((a-b)*beta/b)
-	   y = (a-b)*math.sin(beta) - b*math.sin((a-b)*beta/b)
+	   x = (R+r)*math.cos(beta) - d*math.cos((R+r)*beta/r)
+	   y = (R+r)*math.sin(beta) - d*math.sin((R+r)*beta/r)
            fred.goto(x,y)
 	   if (status==9999):
 		fred.pendown()
 		status=1
 
-hypocycloid(50, 10, 1)
+
+
+epitrochoid(50, 10, 20, 5)
 
 wn.exitonclick()
