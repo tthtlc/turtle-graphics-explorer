@@ -1,5 +1,6 @@
 
 import math
+import sys
 import turtle
 import random
 
@@ -27,6 +28,11 @@ def hypocycloid(a, b, nos_cycle):
 		fred.pendown()
 		status=1
 
+if len(sys.argv) == 3:
+        a = int(sys.argv[1])
+        b = int(sys.argv[2])
+	hypocycloid(a, b, 200)
+        end_of_world=99
 
 while end_of_world<99:
 	a=random.randint(1,400)
@@ -36,4 +42,3 @@ while end_of_world<99:
 	raw = raw_input()
 	fred.reset()
 	fred.clear()
-

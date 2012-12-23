@@ -1,6 +1,8 @@
 
+import sys
 import math
 import turtle
+import random
 
 wn = turtle.Screen()
 wn.bgcolor('lightblue')
@@ -10,6 +12,7 @@ R_inner=200
 
 fred = turtle.Turtle()
 fred.speed(99999)
+end_of_world=1
 
 def epicycloid(a, b, nos_cycle):
     n=72
@@ -25,6 +28,19 @@ def epicycloid(a, b, nos_cycle):
 		fred.pendown()
 		status=1
 
-epicycloid(50, 10, 1)
+if len(sys.argv) == 3:
+	a = int(sys.argv[1])
+	b = int(sys.argv[2])
+	epicycloid(a, b, 200)
+	end_of_world=99
+
+while end_of_world<99:
+	a=random.randint(1,100)
+	b=random.randint(1,100)
+	print a, b
+	epicycloid(a, b, 200)
+	raw = raw_input()
+	fred.reset()
+	fred.clear()
 
 wn.exitonclick()
