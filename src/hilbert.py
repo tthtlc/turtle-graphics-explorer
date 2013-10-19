@@ -4,7 +4,7 @@ import turtle as t
 import sys
 
 p = t.Pen()
-p.reset()
+##p.reset()
 p.speed(9000)
 
 def a(distance):
@@ -37,9 +37,13 @@ def b(distance):
 		p.right(90) 
 
 if len(sys.argv) != 2:
-        print "Usage: "+sys.argv[0]+" length"
+        print "Usage: "+sys.argv[0]+" length (recommended 75 or less)"
         sys.exit(1)
 
 length = int(sys.argv[1])
+p.penup()
+p.setx(50-length*3)
+p.sety(50-length*3)
+p.pendown()
 a(length)
 raw = raw_input()
