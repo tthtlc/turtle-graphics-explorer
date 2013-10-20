@@ -10,6 +10,9 @@ p.setx(-300)
 p.pendown()
 angle=60
 
+###X ===> YF+XF+Y
+###Y ===> XF−YF−X
+
 def a(distance, order):
 	if (order > 1):
 		b(distance/2,order-1)
