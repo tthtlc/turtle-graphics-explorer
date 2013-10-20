@@ -2,6 +2,15 @@
 ##import turtle as t
 import sys
 
+
+#### How to generate new python program?
+### As shown below are two pattern:
+### A="-BFA+A+AFB-"
+### B="+AFB-B-BFA+"
+### just have to create a pattern string based on A, B, F, and +/- as the characters.
+### the A is a function_a(), and B is function_b(), and F is for forward(), +/- is for right and left turn.   The angle (in terms of degree) is determined by the input to this program.
+### for example:   python hilbert_generator 90
+
 ##p = t.Pen()
 ##p.reset()
 ##p.speed(9000)
