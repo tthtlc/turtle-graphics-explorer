@@ -1,0 +1,28 @@
+
+The entire hilbert series are documented as follows:
+
+
+The main construction by order (meaning that the forwarding distance is constant)
+
+src/hilbert_by_order.py
+
+The main construction by distance (meaning that the forwarding distance is decremental):
+
+src/hilbert_by_distance.py
+
+src/hilbert_generator.py:  this is the main starting program that generated the other generated files:
+
+src/hilbert_generatedv1.py
+src/hilbert_generatedv2.py
+src/hilbert_generatedv3.py
+src/hilbert_generatedv4.py
+
+Other variations:
+
+src/hilbert_inverted.py
+src/hilbert_slanted.py
+src/hilbert_star.py
+src/hilbert_starv2.py
+src/hilbert.txt
+src/hilbertv1.py
+src/hilbertv2.py
