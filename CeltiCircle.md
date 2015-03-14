@@ -1,0 +1,1 @@
+![http://turtle-graphics-explorer.googlecode.com/git/images/celtic_circle.png](http://turtle-graphics-explorer.googlecode.com/git/images/celtic_circle.png)

@@ -1,0 +1,1 @@
+![http://turtle-graphics-explorer.googlecode.com/git-history/ef7eb057a911536228f134ba78f4fdbf21634f79/images/moving_star_5.png](http://turtle-graphics-explorer.googlecode.com/git-history/ef7eb057a911536228f134ba78f4fdbf21634f79/images/moving_star_5.png)
